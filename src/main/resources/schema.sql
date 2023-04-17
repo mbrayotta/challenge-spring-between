@@ -1,16 +1,16 @@
-CREATE TABLE fees
+CREATE TABLE IF NOT EXISTS fees
 (
     id     INT PRIMARY KEY,
     amount DECIMAL(4, 2)
 );
 
-CREATE TABLE brands
+CREATE TABLE IF NOT EXISTS brands
 (
     id   INT PRIMARY KEY,
     name VARCHAR(20)
 );
 
-CREATE TABLE prices
+CREATE TABLE IF NOT EXISTS prices
 (
     id         INT AUTO_INCREMENT PRIMARY KEY,
     brand_id   INT,

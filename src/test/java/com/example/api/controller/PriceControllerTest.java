@@ -5,13 +5,12 @@ import com.example.api.dto.PriceDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.web.servlet.MvcResult;
 
-import javax.transaction.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-@Transactional
+
 public class PriceControllerTest extends AbstractFunctionalTest {
     private static final String PRICE_ENDPOINT = "/api/v1/price";
 
@@ -52,6 +51,7 @@ public class PriceControllerTest extends AbstractFunctionalTest {
         assertEquals(expectedPrice, mvcResult.getResponse().getContentAsString());
 
     }
+
     @Test
     public void testGetProductPriceIsNotFound() throws Exception {
         MvcResult mvcResult = mockMvc.perform(get(PRICE_ENDPOINT)

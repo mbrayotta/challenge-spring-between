@@ -29,7 +29,5 @@ public class PriceMapperTest {
         assertEquals(price.getStartDate(), priceDTO.getStartDate());
         assertEquals(price.getEndDate(), priceDTO.getEndDate());
         assertEquals(expectedAmount, priceDTO.getFinalAmount());
-
-
     }
 }
